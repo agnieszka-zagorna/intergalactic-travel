@@ -3,23 +3,24 @@ import { RouterModule, Routes } from '@angular/router';
 import { DetailsComponent } from './details/details.component';
 import { AppComponent } from './app.component';
 import { DataformComponent } from './dataform/dataform.component';
+import { DestinationsComponent } from './destinations/destinations.component';
 
 const routes: Routes = [
-   {
-    path: '',
-    component: AppComponent,
+  //  {
+  //   path: '/destinations',
+  //   component: DestinationsComponent,
     
-  },
-  {
-    path: 'details/:planet.name',
-    component: DetailsComponent,
+  // },
+  // {
+  //   path: 'details/:planet.name',
+  //   component: DetailsComponent,
     
-  },
-  {
-    path: 'dataform',
-    component: DataformComponent,
+  // },
+  // {
+  //   path: 'dataform',
+  //   component: DataformComponent,
     
-  },
+  // },
   
 ];
 

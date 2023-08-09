@@ -1,1 +1,21 @@
-<p>dataform works!</p>
+<h2>Fill in the form</h2>
+<div>After we receive the filled in form our consultant will contact you with the price and the dates the trip will be possible.</div>
+
+<form [formGroup]="userForm" (ngSubmit)="submit($event)">
+  <label for="first-name">First name:</label>
+  <input id="first-name" type="text"  formControlName="firstname" />
+
+  <label for="last-name">Last name:</label>
+  <input id="last-name" type="text" formControlName="lastname"/>
+
+  <label for="email">Email:</label>
+  <input id="email" type="email"  formControlName="email"/>
+
+  <label for="phone">Phone number:</label>
+  <input id="phone" type="tel" formControlName="phone"/>
+
+  <div class="actions">
+    <div class="spacer"></div>
+    <button [disabled]="!userForm.valid" type="submit">Send form - our consultant will contact you!</button>
+  </div>
+</form>

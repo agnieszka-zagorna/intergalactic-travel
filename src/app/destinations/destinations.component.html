@@ -4,7 +4,8 @@
         <img src="assets/icons/001-beetroot.svg" alt="beetroot" />
       </div> -->
       <div>{{planet.name}}</div>
-      <button (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button>
+      <div> Climate: {{planet.climate}} </div>
+      <button [disabled]="planet.added" (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button>
       <!-- <button routerLink = "/details/((encodePlanetName(planet.name)))">Details</button> -->
     </li>
   </ul>
