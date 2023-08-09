@@ -1,0 +1,10 @@
+<ul class="planet-list destinations--planet-list">
+    <li *ngFor="let planet of planets">
+      <!-- <div class="destinations--planet-icon">
+        <img src="assets/icons/001-beetroot.svg" alt="beetroot" />
+      </div> -->
+      <div>{{planet.name}}</div>
+      <button (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button>
+      <!-- <button routerLink = "/details/((encodePlanetName(planet.name)))">Details</button> -->
+    </li>
+  </ul>
