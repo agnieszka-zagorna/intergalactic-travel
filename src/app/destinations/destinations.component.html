@@ -1,11 +1,57 @@
-<ul class="planet-list destinations--planet-list">
-    <li *ngFor="let planet of planets">
+<!-- <ul class="planet-list destinations--planet-list">
+  <h3>Filter by:</h3>
+  <mat-form-field>
+    <mat-label>Climate</mat-label>
+    <mat-select [(value)]="selectedClimate">
+      <mat-option>All</mat-option>
+      <mat-option value="temperate">temperate</mat-option>
+      <mat-option value="arid">arid</mat-option>
+      <mat-option value="tropical">tropical</mat-option>
+      <mat-option value="frozen">frozen</mat-option>
+      <mat-option value="murky">murky</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button (click)="filterByClimate(selectedClimate)">Filter</button>
+  <button [disabled]="sortedAlphabetically" (click)="sortAlphabetically()">{{sortedAlphabetically ? "Sorted alphabetically" : "Sort alphabetically"}}</button>
+    <li *ngFor="let planet of planets"> -->
+
       <!-- <div class="destinations--planet-icon">
         <img src="assets/icons/001-beetroot.svg" alt="beetroot" />
       </div> -->
+<!-- 
       <div>{{planet.name}}</div>
       <div> Climate: {{planet.climate}} </div>
-      <button [disabled]="planet.added" (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button>
+      <button [disabled]="planet.added" (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button> -->
+
       <!-- <button routerLink = "/details/((encodePlanetName(planet.name)))">Details</button> -->
-    </li>
-  </ul>
+
+    <!-- </li>
+  </ul> -->
+
+  <div class="planet-list-container">
+    <div class="filter-controls">
+      <h3>Filter by:</h3>
+      <mat-form-field>
+        <mat-label>Climate</mat-label>
+        <mat-select [(value)]="selectedClimate">
+          <mat-option>All</mat-option>
+          <mat-option value="temperate">temperate</mat-option>
+          <mat-option value="arid">arid</mat-option>
+          <mat-option value="tropical">tropical</mat-option>
+          <mat-option value="frozen">frozen</mat-option>
+          <mat-option value="murky">murky</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button (click)="filterByClimate(selectedClimate)">Filter</button>
+      <button [disabled]="sortedAlphabetically" (click)="sortAlphabetically()">{{sortedAlphabetically ? "Sorted alphabetically" : "Sort alphabetically"}}</button>
+    </div>
+    
+    <ul class="planet-list">
+      <li *ngFor="let planet of planets">
+        <div>{{planet.name}}</div>
+        <div>Climate: {{planet.climate}}</div>
+        <button [disabled]="planet.added" (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button>
+      </li>
+    </ul>
+  </div>
+  

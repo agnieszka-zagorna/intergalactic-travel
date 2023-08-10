@@ -1,0 +1,39 @@
+/* Styling for the chosen planet list container */
+.chosen--planet-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the planet list */
+  .planet-list.chosen--planet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+  
+  /* Styling for each planet card in chosen list */
+  .planet-list.chosen--planet-list li {
+    list-style: none;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #0a0a0a;
+    font-weight: bold; 
+    text-align: center; 
+  }
+  

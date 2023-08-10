@@ -10,11 +10,15 @@ import { Router } from '@angular/router';
 })
 export class DestinationsComponent implements OnInit {
   planets: Planet[] | null = null
+  copyOfPlanets: Planet[] | null = null
+  selectedClimate = '';
+  sortedAlphabetically = false;
 
   constructor(private readonly travelService: TravelService, private router : Router) {}
 
   async ngOnInit() {
     this.planets = await this.travelService.getPlanetsArray()
+    this.copyOfPlanets = this.planets
   }
 
   addPlanet(planet: Planet){
@@ -24,12 +28,23 @@ export class DestinationsComponent implements OnInit {
     }
   }
 
-  // showDetails(planet: Planet){
-  //   this.router.navigate(["/details", planet]);
-  // }
+  filterByClimate(selectedClimate: string) {
+    this.planets = this.copyOfPlanets
+    this.sortedAlphabetically = false
 
-  // encodePlanetName(name: string): string {
-  //   return encodeURIComponent(name)
-  // }
+    if(this.planets !== null && selectedClimate !== undefined && selectedClimate !== '') {
+      this.planets = this.planets.filter((planet) => {
+        const planetClimates = planet.climate.split(',').map(climate => climate.trim())
+        return planetClimates.includes(selectedClimate)
+    })
+    }
+  }
+
+  sortAlphabetically() {
+    if(this.planets !== null) {
+      this.sortedAlphabetically = true
+      this.planets = this.planets.sort((a, b) => a.name.localeCompare(b.name))
+    }
+  }
 
 }

@@ -1,0 +1,87 @@
+/* Styling for the planet list container */
+.planet-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for filtering controls and buttons */
+  .filter-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for buttons in the filter controls */
+  .filter-controls button {
+    font-size: 12px;
+    background-color: #673ab7; /* Purple color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  /* On hover effect for buttons */
+  .filter-controls button:hover {
+    background-color: #5a2a9d; /* Darker purple color */
+  }
+  
+  /* Styling for the planet list */
+  .planet-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+  
+  /* Styling for each planet card */
+  .planet-list li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(33.33% - 20px);
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+  }
+  
+  /* Styling for planet name */
+  .planet-list li div:nth-child(1) {
+    font-weight: bold;
+    color: #673ab7; /* Purple color */
+  }
+  
+  /* Styling for climate information */
+  .planet-list li div:nth-child(2) {
+    font-size: 14px;
+    color: #0a0a0a;
+  }
+  
+  /* Styling for "Add to travel plan" button */
+  .planet-list li button {
+    align-self: flex-end;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #673ab7; /* Purple color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  /* On hover effect for buttons */
+  .planet-list li button:hover {
+    background-color: #5a2a9d; /* Darker purple color */
+  }
+  

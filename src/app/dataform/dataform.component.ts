@@ -17,23 +17,12 @@ export class DataformComponent {
     lastname: ['', [Validators.required]],//, Validators.pattern('^[a-zA-Z]+$')]],
     email: ['', Validators.required],
     phone: ['', Validators.required],
-
+    people: ['', Validators.required],
   });
 
   submit(event: Event) {
     if (this.userForm.valid) {
       //TODO
-
-      // const newContact: Contact = {
-      //   firstname: this.userForm.value.firstname as string,
-      //   lastname: this.userForm.value.lastname as string,
-      //   street: this.userForm.value.street as string,
-      //   city: this.userForm.value.city as string,
-      // };
-      // this.contactservice.addContact(newContact);
-      // console.log(newContact)
-
-
     }
   }
 

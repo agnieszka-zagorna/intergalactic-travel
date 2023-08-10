@@ -1,0 +1,22 @@
+/* Styling for header */
+.header {
+    background-color: #673ab7;
+    color: #fff; 
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+/* Styling for main content */
+.main {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto; 
+    max-height: 80vh;
+  }
+  
+  
+  /* Center align text within h2 */
+  .main h2 {
+    text-align: center;
+  }
