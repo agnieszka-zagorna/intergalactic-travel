@@ -19,15 +19,23 @@ export class TravelService {
   }
 
   async fetchPlanets() : Promise<Planet[]> {
-    const response = await firstValueFrom(
-      this.http.get<any>(`${environment.apiUrl}`).pipe(
-        map(r => r.results as Planet[])
+    const allPlanets: Planet[] = [];
+
+    let nextPageUrl = `${environment.apiUrl}`;
+
+    while (nextPageUrl) {
+      const response = await firstValueFrom(
+        this.http.get<any>(nextPageUrl).pipe(
+          map(r => r as { results: Planet[], next: string })
         )
       );
-      console.log(response)
-      response.forEach((planet) => planet.added = false)
+      allPlanets.push(...response.results);
+      nextPageUrl = response.next;
+    }
 
-      return response
+    allPlanets.forEach((planet) => planet.added = false)
+
+    return allPlanets;
   }
 
   addPlanetToChosen(planet: Planet) {
