@@ -40,9 +40,26 @@
           <mat-option value="tropical">tropical</mat-option>
           <mat-option value="frozen">frozen</mat-option>
           <mat-option value="murky">murky</mat-option>
+          <mat-option value="moist">moist</mat-option>
+          <mat-option value="hot">hot</mat-option>
+          <mat-option value="humid">humid</mat-option>
         </mat-select>
       </mat-form-field>
-      <button (click)="filterByClimate(selectedClimate)">Filter</button>
+      <mat-form-field>
+        <mat-label>Terrain</mat-label>
+        <mat-select [(value)]="selectedTerrain">
+          <mat-option>All</mat-option>
+          <mat-option value="desert">desert</mat-option>
+          <mat-option value="grasslands">grasslands</mat-option>
+          <mat-option value="mountains">mountains</mat-option>
+          <mat-option value="jungle">jungle</mat-option>
+          <mat-option value="rainforests">rainforests</mat-option>
+          <mat-option value="tundra">tundra</mat-option>
+          <mat-option value="swamp">swamp</mat-option>
+          <mat-option value="gas giant">gas giant</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button (click)="filter(selectedClimate, selectedTerrain)">Filter</button>
       <button [disabled]="sortedAlphabetically" (click)="sortAlphabetically()">{{sortedAlphabetically ? "Sorted alphabetically" : "Sort alphabetically"}}</button>
     </div>
     
