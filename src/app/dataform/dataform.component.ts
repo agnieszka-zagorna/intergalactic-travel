@@ -13,8 +13,8 @@ export class DataformComponent {
   }
 
   userForm = this.formBuilder.group({
-    firstname: ['', [Validators.required]],//, Validators.pattern('^[a-zA-Z]+$')]],
-    lastname: ['', [Validators.required]],//, Validators.pattern('^[a-zA-Z]+$')]],
+    firstname: ['', [Validators.required]],
+    lastname: ['', [Validators.required]],
     email: ['', Validators.required],
     phone: ['', Validators.required],
     people: ['', Validators.required],
