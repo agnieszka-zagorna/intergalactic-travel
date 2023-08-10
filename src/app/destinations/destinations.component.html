@@ -50,7 +50,7 @@
       <li *ngFor="let planet of planets">
         <div>{{planet.name}}</div>
         <div>Climate: {{planet.climate}}</div>
-        <button [disabled]="planet.added" (click)="addPlanet(planet)">{{planet.added ? "Already in your plan!" : "Add to travel plan"}}</button>
+        <button (click)="movePlanet(planet)">{{planet.added ? "Remove from travel plan" : "Add to travel plan"}}</button>
       </li>
     </ul>
   </div>

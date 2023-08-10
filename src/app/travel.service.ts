@@ -34,4 +34,8 @@ export class TravelService {
     this.planetsChosen.push(planet)
   }
 
+  removePlanetFromChosen(planet: Planet) {
+    this.planetsChosen.splice(this.planetsChosen.indexOf(planet), 1)
+  }
+
 }

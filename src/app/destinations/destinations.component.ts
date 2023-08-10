@@ -21,10 +21,13 @@ export class DestinationsComponent implements OnInit {
     this.copyOfPlanets = this.planets
   }
 
-  addPlanet(planet: Planet){
+  movePlanet(planet: Planet){
     if(!planet.added) {
       planet.added = true
       this.travelService.addPlanetToChosen(planet)
+    } else {
+      planet.added = false
+      this.travelService.removePlanetFromChosen(planet)
     }
   }
 

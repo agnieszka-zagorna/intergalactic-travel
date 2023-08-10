@@ -33,17 +33,23 @@ I'd like to add a destination to my cart.
 ```
 5.
 As a customer,
+So I can edit my travel plan,
+I'd like to remove a destination from my cart.
+```
+```
+6.
+As a customer,
 So I can be contacted by a consultant,
 I'd like to be able to leave my contact information.
 ```
 ```
-6.
+7.
 As a customer,
 So I can travel with a company,
 I'd like to be able to choose the number of people on the reservation.
 ```
 ```
-7.
+8.
 As a marketing manager,
 So the consultants can work on travel offers,
 I'd like to be able to collect contact information of clients.
